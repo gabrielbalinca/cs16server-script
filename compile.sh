@@ -56,6 +56,10 @@ cp -r /home/resources/cstrike/* /home/$server_name/cstrike
 # Change server name
 sed -i 's,hostname "Counter-Strike 1.6 Server",hostname "'"$input_server_name"'",g' /home/$server_name/cstrike/server.cfg
 
+# Aditional cfgs
+mkdir /home/$server_name/cstrike/banned.cfg
+mkdir /home/$server_name/cstrike/listip.cfg
+
 # Script for starting the server
 cd /home/$server_name
 touch start.sh
@@ -63,8 +67,4 @@ echo -n "screen -A -m -d -S $server_name ./hlds_run -game cstrike +maxplayers 25
 echo -n $port >> start.sh
 echo -n " -autoupdate -pingboost 3" >> start.sh
 chmod +x start.sh
-./start.sh
 
-# Aditional cfgs
-mkdir /home/$server_name/cstrike/banned.cfg
-mkdir /home/$server_name/cstrike/listip.cfg

@@ -1,5 +1,6 @@
 # Counter-Strike 1.6 Server Script
 * This is a script for automating a counter-strike 1.6 server installation.
+* For starting the server please run start.sh file inside server's name directory
 
 # Instllation
 * Starting the installation its simple just run this command :
